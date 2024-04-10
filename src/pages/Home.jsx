@@ -1,45 +1,42 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
+import { SectionsContainer, Section } from 'react-fullpage';
 import styled from 'styled-components';
-import { throttle } from 'lodash';
 import Header from '../components/Header';
 
 function Home() {
-  const SLIDE_COUNT = 3; // 슬라이드 개수
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0); // 현재 슬라이드
-
-  const slideRef = useRef([]);
+  const options = {
+    anchors: ['FirstSection', 'SecondSection', 'ThirdSection'],
+  };
 
   return (
     <HomeLayout>
-      {/* <Header /> */}
-      <IntroSlider
-        ref={(element) => {
-          slideRef.current[0] = element;
-        }}
-        bgColor="#cae8ff"
-      >
-        <IntroText>취미를 잃기 쉬운 현대 사회</IntroText>
-        <IntroText>여러분은 자신만의 취미를 갖고 계신가요?</IntroText>
-      </IntroSlider>
-      <IntroSlider
-        ref={(element) => {
-          slideRef.current[1] = element;
-        }}
-        bgColor="#ffcaea"
-      >
-        <IntroText>
-          슬기로운 취미생활은 취미를 공유하며 영감을 얻는 공간입니다.
-        </IntroText>
-      </IntroSlider>
-      <IntroSlider
-        ref={(element) => {
-          slideRef.current[2] = element;
-        }}
-      >
-        <IntroText>
-          사람들과 함께 성장하며 당신의 무한한 가능성을 찾아보세요!
-        </IntroText>
-      </IntroSlider>
+      <SectionsContainer {...options}>
+        {/* <Header /> */}
+        <Section>
+          <IntroSlider
+            bgColor="#cae8ff"
+          >
+            <IntroText>취미를 잃기 쉬운 현대 사회</IntroText>
+            <IntroText>여러분은 자신만의 취미를 갖고 계신가요?</IntroText>
+          </IntroSlider>
+        </Section>
+        <Section>
+          <IntroSlider
+            bgColor="#ffcaea"
+          >
+            <IntroText>슬기로운 취미생활은 취미를 공유하며</IntroText>
+            <IntroText>영감을 얻는 공간입니다.</IntroText>
+          </IntroSlider>
+        </Section>
+        <Section>
+          <IntroSlider
+            bgColor="#FFF980"
+          >
+            <IntroText>사람들과 함께 성장하며</IntroText>
+            <IntroText>당신의 무한한 가능성을 찾아보세요!</IntroText>
+          </IntroSlider>
+        </Section>
+      </SectionsContainer>
     </HomeLayout>
   );
 }
@@ -54,13 +51,17 @@ const IntroSlider = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.bgColor || 'white'};
+  background-color: #fff980;
+  background-image: url(/images/black_cloud_v2.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 const IntroText = styled.div`
-  color: #323232;
-  //font-size: 16px;
-  font-family: "Nanum Gothic", sans-serif;
+  color: white;
+  font-size: 30px;
+  font-family: "Nanum Gothic", "Noto Sans KR", sans-serif;
   font-weight: bold;
   padding: 20px;
 `;

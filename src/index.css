@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap'); /* 제목 폰트를 위해 구글 폰트 임포트 */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); /* 본문 폰트를 위해 구글 폰트 임포트 */
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Noto+Sans+KR:wght@100..900&display=swap');
+
 html {
   height: 100%;
   scroll-behavior: smooth;
