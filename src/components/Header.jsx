@@ -1,25 +1,26 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const Header = () => {
-    return (
-        <HeaderLayout>
-            <HeaderTitle>
-                슬기로운 취미생활
-            </HeaderTitle>
-            <HeaderNav>
-                <HeaderNavItem>
-                    둘러보기
-                </HeaderNavItem>
-                <HeaderNavItem>
-                    공유하기
-                </HeaderNavItem>
-                <HeaderNavItem>
-                    나의 취미생활
-                </HeaderNavItem>
-            </HeaderNav>
-        </HeaderLayout>
-    );
-};
+function Header() {
+  return (
+    <HeaderLayout>
+      <HeaderTitle>
+        슬기로운 취미생활
+      </HeaderTitle>
+      <HeaderNav>
+        <HeaderNavItem>
+          둘러보기
+        </HeaderNavItem>
+        <HeaderNavItem>
+          공유하기
+        </HeaderNavItem>
+        <HeaderNavItem>
+          나의 취미생활
+        </HeaderNavItem>
+      </HeaderNav>
+    </HeaderLayout>
+  );
+}
 
 const HeaderLayout = styled.div`
     display: flex;
