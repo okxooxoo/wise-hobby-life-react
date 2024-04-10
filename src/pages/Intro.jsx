@@ -1,11 +1,11 @@
 import React from 'react';
 import { SectionsContainer, Section } from 'react-fullpage';
 import styled from 'styled-components';
-import Header from '../components/Header';
+import AuthBtns from '../components/AuthBtns';
 
-function Home() {
+function Intro() {
   const options = {
-    anchors: ['FirstSection', 'SecondSection', 'ThirdSection'],
+    anchors: ['FirstSection', 'SecondSection', 'ThirdSection', 'AuthSection'],
   };
 
   return (
@@ -35,6 +35,9 @@ function Home() {
             <IntroText>사람들과 함께 성장하며</IntroText>
             <IntroText>당신의 무한한 가능성을 찾아보세요!</IntroText>
           </IntroSlider>
+        </Section>
+        <Section>
+          <AuthBtns />
         </Section>
       </SectionsContainer>
     </HomeLayout>
@@ -66,4 +69,4 @@ const IntroText = styled.div`
   padding: 20px;
 `;
 
-export default Home;
+export default Intro;
