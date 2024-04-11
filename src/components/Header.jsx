@@ -23,36 +23,36 @@ function Header() {
 }
 
 const HeaderLayout = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const HeaderTitle = styled.div`
-    font-family: 'Moirai One', sans-serif;
-    font-size: 34px;
-    font-weight: bold;
-    color: white;
-    margin: 68px;
+  font-family: 'Moirai One', sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+  margin: 68px;
 `;
 
 const HeaderNav = styled.div`
-    height: 22px;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #cae8ff;
-    border-radius: 20px;
+  height: 22px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #cae8ff;
+  border-radius: 20px;
 `;
 
 const HeaderNavItem = styled.div`
-    color: #323232;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+  color: #323232;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 `;
 
 export default Header;

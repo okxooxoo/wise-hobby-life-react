@@ -64,7 +64,7 @@ const IntroSlider = styled.section`
 const IntroText = styled.div`
   color: white;
   font-size: 30px;
-  font-family: "Nanum Gothic", "Noto Sans KR", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: bold;
   padding: 20px;
 `;

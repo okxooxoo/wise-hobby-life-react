@@ -1,6 +1,6 @@
 .App {
   height: 100%;
   background-color: #FFF980;
-  /* background:linear-gradient(to bottom, #ffcaea, #cae8ff); */
   text-align: center;
+  font-family: "Nanum Gothic", sans-serif;
 }
